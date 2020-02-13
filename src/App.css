@@ -41,5 +41,13 @@ h2 {
   border-radius: 20px;
   padding: 10px;
   background-color: red;
+  margin-right: 600px;
 }
 
+h1 {
+  text-align: center;
+}
+body{
+  background-color: black;
+  color: beige;
+}

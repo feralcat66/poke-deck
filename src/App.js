@@ -2,20 +2,33 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import request from 'superagent';
-import Container from './pokelist.js';
 import pokemon from './data.js'
+import Deck from './Deck.js'
+import Header from './Header.js'
+
 
 class App extends Component {
-render() {
+
+state = { 
+  data: []
+}
+
 
   async componentDidMount() {
     const data = await request.get('https://alchemy-pokedex.herokuapp.com/api/pokedex')
-    this.setState({data: data.body})
-  }
+    console.log(data.body)
+    this.setState({data: data.body.results})
+ }  
+ 
+ render() {
 
-  const pokeNode = pokemon.map(pokemonObj => <Container pokemon={pokemonObj}/>);
-  return (
-  <ul className="pokeDeck">{pokeNode}</ul>
+ 
+      return (
+        <main>
+          <Header />
+
+      <Deck array={this.state.data}/>
+    </main>
   )
 
 }
