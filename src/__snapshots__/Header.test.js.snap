@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`this renders header 1`] = `
+<h1>
+  <img
+    alt="pokemon-font"
+    border="0"
+    src="https://fontmeme.com/permalink/200213/cda48847e72671ec952d89973b268209.png"
+  />
+</h1>
+`;
