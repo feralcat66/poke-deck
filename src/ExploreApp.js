@@ -12,7 +12,6 @@ export default class HomeApp extends Component {
     async loadPokemon() {
         const response = await getPokemon();
         const pokemon = response.results;
-        console.log(response);
         const totalResults = response.count;
         this.setState({
             pokemon: pokemon,

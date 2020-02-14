@@ -10,14 +10,14 @@ export default class SearchOptions extends Component {
     }
   
     state = {
-      checkedRadio: [{ name: "pokemon" }, { name: "speed" }, { name: "type" }],
+      checkedRadio: 'type',
       searchInput: ""
     };
   
     updateControls() {
       const queryString = window.location.hash.slice(1);
       const searchParams = new URLSearchParams(queryString);
-      const type = searchParams.get("type");
+      const type = searchParams.get("pokemon");
   
       this.setState({
         searchInput: searchParams.get("s") || "",
@@ -33,8 +33,8 @@ export default class SearchOptions extends Component {
       const queryString = window.location.hash.slice(1);
       const searchParams = new URLSearchParams(queryString);
   
-      searchParams.set("type", formData.get("type"));
-      searchParams.set("s", formData.get("search"));
+      searchParams.set("pokemon", formData.get("type"));
+      searchParams.set("pokemon", formData.get("search"));
       //reset to page 1 as this is new search and
       //we don't know how many pages
       searchParams.set("page", 1);
