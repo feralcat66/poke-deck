@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import request from 'superagent';
-import pokemon from './data.js'
 import Deck from './Deck.js'
 import Header from './Header.js'
+import ExploreApp from './ExploreApp.js' 
 
 
 class App extends Component {
@@ -28,6 +28,7 @@ state = {
           <Header />
 
       <Deck array={this.state.data}/>
+      <ExploreApp />
     </main>
   )
 

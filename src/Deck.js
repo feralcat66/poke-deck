@@ -6,7 +6,7 @@ export default class Deck extends Component {
 
       render() {
    const pokeList = this.props.array.map(pokemon => {
-     return( <Container pokemon={pokemon}/>
+     return( <Container key={pokemon._id}pokemon={pokemon}/>
 
      )  
    })
