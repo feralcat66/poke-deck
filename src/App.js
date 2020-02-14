@@ -8,28 +8,15 @@ import ExploreApp from './ExploreApp.js'
 
 
 class App extends Component {
-
-state = { 
-  data: []
-}
-
-
-  async componentDidMount() {
-    const data = await request.get('https://alchemy-pokedex.herokuapp.com/api/pokedex')
-    console.log(data.body)
-    this.setState({data: data.body.results})
- }  
  
  render() {
 
  
       return (
-        <main>
-          <Header />
+       <div>
 
-      <Deck array={this.state.data}/>
-      <ExploreApp />
-    </main>
+         <ExploreApp />
+       </div>
   )
 
 }
